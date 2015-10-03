@@ -13,9 +13,20 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
+from __future__ import unicode_literals, absolute_import
 from django.conf.urls import include, url
 from django.contrib import admin
+from rest_framework import routers
+from core import views
+
+
+router = routers.DefaultRouter()
+router.register(r'platforms', views.PlatformViewSet)
+router.register(r'stores', views.StoreViewSet)
+router.register(r'products', views.ProductViewSet)
 
 urlpatterns = [
+    url(r'^', include(router.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^admin/', include(admin.site.urls)),
 ]
