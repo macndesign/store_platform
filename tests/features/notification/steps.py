@@ -1,16 +1,6 @@
-# -*- coding: utf-8 -*-
+# coding: utf-8
 from __future__ import unicode_literals, absolute_import
 from lettuce import step
-
-
-@step(u'Notifica o Marketplace Não VTEX que houve uma mudança nas condições comerciais (preço, estoque, SLAs de entrega)')
-def notifica_o_marketplace_nao_vtex_que_houve_uma_mudanca_nas_condicoes_comerciais_preco_estoque_slas_de_entrega(step):
-    assert False, 'This step must be implemented'
-
-
-@step(u'de uma SKU - Endpoint do Afiliado (Marketplace)')
-def de_uma_sku_endpoint_do_afiliado_marketplace(step):
-    assert False, 'This step must be implemented'
 
 
 @step(u'Given que eu altero o preço de um SKU em "([^"]*)" para o valor de "([^"]*)"')
